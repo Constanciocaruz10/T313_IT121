@@ -1,0 +1,29 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter number: ");
+        int num = scanner.nextInt();
+        
+        do {
+            if(num <= 0) {
+                System.out.println("Number must be positive integer.");
+                break;
+            }
+            
+            if(num == 1) {
+                break;
+            }
+                
+            if(num % 2 == 1) {
+                num = (num * 3) + 1;
+            } else {
+                num = num / 2;
+            }
+            System.out.println(num);
+        } while(num != 1 || num > 0);
+        
+    }
+}
